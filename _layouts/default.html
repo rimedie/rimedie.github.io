@@ -200,6 +200,17 @@ ul {
 	  
   </head>
   <body>
+	  	    	    <script>
+			    $("#slideshow > div:gt(0)").hide();
+				setInterval(function() { 
+  				$('#slideshow > div:first')
+    				.fadeOut(1000)
+    				.next()
+    				.fadeIn(1000)
+    				.end()
+    				.appendTo('#slideshow');
+				},  3000);
+	    </script>
    <a href="https://rimedie.github.io/"><img class='displayed' style="float:right; border: 6px solid black;" src="images_gral/Logoo.jpg" alt="LogoRIMEDIE" ></a>
 	  <br><br>
    <div class="dropdown">
@@ -264,17 +275,6 @@ ul {
      Pretty cool eh? This slide is proof the content can be anything.
    </div>
 </div>
-	    	    <script>
-			    $("#slideshow > div:gt(0)").hide();
-				setInterval(function() { 
-  				$('#slideshow > div:first')
-    				.fadeOut(1000)
-    				.next()
-    				.fadeIn(1000)
-    				.end()
-    				.appendTo('#slideshow');
-				},  3000);
-	    </script>
 	    
     </article>
 	  
