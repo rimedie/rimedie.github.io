@@ -249,6 +249,9 @@ ul {
 	 	<hr class="style2">
     </center>
     <article>
+	    
+    
+      {{ content }}
 	    <div id="slideshow">
    <div>
      <img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
@@ -260,7 +263,7 @@ ul {
      Pretty cool eh? This slide is proof the content can be anything.
    </div>
 </div>
-	    <script>
+	    	    <script>
 			    $("#slideshow > div:gt(0)").hide();
 				setInterval(function() { 
   				$('#slideshow > div:first')
@@ -272,7 +275,6 @@ ul {
 				},  3000);
 	    </script>
 	    
-      {{ content }}
     </article>
 	  
       <footer class="site-footer">
