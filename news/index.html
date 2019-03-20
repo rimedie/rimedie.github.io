@@ -1,0 +1,19 @@
+---
+layout: default
+title: Noticias
+---
+	
+<body>
+	
+      		<h1 class="project-name">{{ page.title }}</h1>
+	<br><br>
+
+	<ul class="posts">
+	  {% for post in site.posts %}
+	    <div class="container" style="background-color:#D8D8D8; border-left: 3px dotted black; margin-left:0px; padding: 1em; width:60%; border-top-right-radius: 50px; border-bottom-right-radius: 50px;">
+		    <span style="color:#0A2A0A;"><b>{{ post.date | date_to_string }}</b></span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+	    </div> 
+	    <br><br>
+	  {% endfor %}
+	</ul>
+</body>
