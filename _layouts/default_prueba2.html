@@ -179,57 +179,115 @@ ul {
 	
 	.no-drop {cursor: no-drop;}
 	
-.bss-slides{
-  	display: block; 
+
+	
+	
+	
+	
+	
+	* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
-.bss-slides figure:first-child{
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
-}
-.bss-slides:focus{
- outline: 0;
-}
-.bss-slides figure img{
-  opacity: 0;
-  -webkit-transition: opacity 1.2s;
-  transition: opacity 1.2s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.bss-slides .bss-show{
-  z-index: 1;
-}
-.bss-slides .bss-show img{
-  opacity: 1;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.bss-next, .bss-prev{
-  color: #fff;
-  background: #000;
-  background: rgba(0,0,0, .6);
-  font-size: 2em;
-  opacity: .5;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
   user-select: none;
 }
-.bss-next:hover, .bss-prev:hover{
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
   cursor: pointer;
-  opacity: 1;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-.bss-next{
-  right: -2px;
-  padding: 10px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+
+.active, .dot:hover {
+  background-color: #717171;
 }
-.bss-prev{
-  left: 0;
-  padding: 10px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 }
@@ -285,187 +343,75 @@ ul {
        </div>
 	  <br>	  
 	  <header>
-		  		  
-       <div class="bss-slides demo1" tabindex="1" style="text-align:center;">
-	   <figure>
-		    <a href="/PLANEA-ELSEN_2015/RIMEDIE_Reporte.Breve06_2015.pdf" download><img src="/PLANEA-ELSEN_2015/Logo_Descargas.png" style="width: 400;border: 2px solid black;" /></a> 
-           </figure>
-	    <figure>
-		    <a href="/PLANEA-ELSEN_2015/Resultados_Nacionales.html" target="_blank"><img src="/PLANEA-ELSEN_2015/Logo_EnLinea.png" style="height=280; width=400; border: 2px solid black;" /></a>
-            </figure>
-        </div> <!-- // bss-slides -->
-	
-	  
+		  		
+		  
+		  
+		  
+		  
+		  
+		  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="/PLANEA-ELSEN_2015/Logo_Descargas.png" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="/PLANEA-ELSEN_2015/Logo_EnLinea.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="/PLANEA-ELSEN_2015/Logo_Descargas.png" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 	  <script>
-		  var makeBSS = function (el, options) {
-    var $slideshows = document.querySelectorAll(el), // a collection of all of the slideshow
-        $slideshow = {},
-        Slideshow = {
-            init: function (el, options) {
-                this.counter = 0; // to keep track of current slide
-                this.el = el; // current slideshow container    
-                this.$items = el.querySelectorAll('figure'); // a collection of all of the slides, caching for performance
-                this.numItems = this.$items.length; // total number of slides
-                options = options || {}; // if options object not passed in, then set to empty object 
-                options.auto = options.auto || false; // if options.auto object not passed in, then set to false
-                this.opts = {
-                    auto: (typeof options.auto === "undefined") ? false : options.auto,
-                    speed: (typeof options.auto.speed === "undefined") ? 1500 : options.auto.speed,
-                    pauseOnHover: (typeof options.auto.pauseOnHover === "undefined") ? false : options.auto.pauseOnHover,
-                    fullScreen: (typeof options.fullScreen === "undefined") ? false : options.fullScreen,
-                    swipe: (typeof options.swipe === "undefined") ? false : options.swipe
-                };
-                
-                this.$items[0].classList.add('bss-show'); // add show class to first figure 
-                this.injectControls(el);
-                this.addEventListeners(el);
-                if (this.opts.auto) {
-                    this.autoCycle(this.el, this.opts.speed, this.opts.pauseOnHover);
-                }
-                if (this.opts.fullScreen) {
-                    this.addFullScreen(this.el);
-                }
-                if (this.opts.swipe) {
-                    this.addSwipe(this.el);
-                }
-            },
-            showCurrent: function (i) {
-                // increment or decrement this.counter depending on whether i === 1 or i === -1
-                if (i > 0) {
-                    this.counter = (this.counter + 1 === this.numItems) ? 0 : this.counter + 1;
-                } else {
-                    this.counter = (this.counter - 1 < 0) ? this.numItems - 1 : this.counter - 1;
-                }
-                // remove .show from whichever element currently has it 
-                // http://stackoverflow.com/a/16053538/2006057
-                [].forEach.call(this.$items, function (el) {
-                    el.classList.remove('bss-show');
-                });
-  
-                // add .show to the one item that's supposed to have it
-                this.$items[this.counter].classList.add('bss-show');
-            },
-            injectControls: function (el) {
-            // build and inject prev/next controls
-                // first create all the new elements
-                var spanPrev = document.createElement("span"),
-                    spanNext = document.createElement("span"),
-                    docFrag = document.createDocumentFragment();
-        
-                // add classes
-                spanPrev.classList.add('bss-prev');
-                spanNext.classList.add('bss-next');
-        
-                // add contents
-                spanPrev.innerHTML = '&laquo;';
-                spanNext.innerHTML = '&raquo;';
-                
-                // append elements to fragment, then append fragment to DOM
-                docFrag.appendChild(spanPrev);
-                docFrag.appendChild(spanNext);
-                el.appendChild(docFrag);
-            },
-            addEventListeners: function (el) {
-                var that = this;
-                el.querySelector('.bss-next').addEventListener('click', function () {
-                    that.showCurrent(1); // increment & show
-                }, false);
-            
-                el.querySelector('.bss-prev').addEventListener('click', function () {
-                    that.showCurrent(-1); // decrement & show
-                }, false);
-                
-                el.onkeydown = function (e) {
-                    e = e || window.event;
-                    if (e.keyCode === 37) {
-                        that.showCurrent(-1); // decrement & show
-                    } else if (e.keyCode === 39) {
-                        that.showCurrent(1); // increment & show
-                    }
-                };
-            },
-            autoCycle: function (el, speed, pauseOnHover) {
-                var that = this,
-                    interval = window.setInterval(function () {
-                        that.showCurrent(1); // increment & show
-                    }, speed);
-                
-                if (pauseOnHover) {
-                    el.addEventListener('mouseover', function () {
-                        interval = clearInterval(interval);
-                    }, false);
-                    el.addEventListener('mouseout', function () {
-                        interval = window.setInterval(function () {
-                            that.showCurrent(1); // increment & show
-                        }, speed);
-                    }, false);
-                } // end pauseonhover
-                
-            },
-            addFullScreen: function(el){
-                var that = this,
-                fsControl = document.createElement("span");
-                
-                fsControl.classList.add('bss-fullscreen');
-                el.appendChild(fsControl);
-                el.querySelector('.bss-fullscreen').addEventListener('click', function () {
-                    that.toggleFullScreen(el);
-                }, false);
-            },
-            addSwipe: function(el){
-                var that = this,
-                    ht = new Hammer(el);
-                ht.on('swiperight', function(e) {
-                    that.showCurrent(-1); // decrement & show
-                });
-                ht.on('swipeleft', function(e) {
-                    that.showCurrent(1); // increment & show
-                });
-            },
-            toggleFullScreen: function(el){
-                // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
-                if (!document.fullscreenElement &&    // alternative standard method
-                    !document.mozFullScreenElement && !document.webkitFullscreenElement &&   
-                    !document.msFullscreenElement ) {  // current working methods
-                    if (document.documentElement.requestFullscreen) {
-                      el.requestFullscreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                      el.msRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                      el.mozRequestFullScreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                      el.webkitRequestFullscreen(el.ALLOW_KEYBOARD_INPUT);
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                      document.exitFullscreen();
-                    } else if (document.msExitFullscreen) {
-                      document.msExitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                      document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                      document.webkitExitFullscreen();
-                    }
-                }
-            } // end toggleFullScreen
-            
-        }; // end Slideshow object 
-        
-    // make instances of Slideshow as needed
-    [].forEach.call($slideshows, function (el) {
-        $slideshow = Object.create(Slideshow);
-        $slideshow.init(el, options);
-    });
-};
-var opts = {
-    auto : {
-        speed : 5000, 
-        pauseOnHover : true
-    },
-    fullScreen : true, 
-    swipe : true
-};
-makeBSS('.demo1', opts);
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
 		  </script>
 			  
 	  </header>
