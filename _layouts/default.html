@@ -145,46 +145,27 @@ ul {
 }
 	
 /* Dropdown Button */
-.dropbtn {
-  background-color: black;
-  color: white;
-  padding: 8px;
-  font-size: 18px;
-  border: none;
-  border-radius: 15px 15px 15px 5px;
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
- z-index:4;
-}
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff0d3;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 4;
-}
-	
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ffd754;}
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #ff9f0f;}
-	
-	.no-drop {cursor: no-drop;}
-
+.main{width: 100%; background: #eee;}
+/*General Menu Styling*/
+.mainnav{margin: 0 auto}
+li{list-style: none;}
+li a{text-decoration: none;}
+.dropdown{position: absolute; width: 150px;top: 41px; opacity: 0;visibility: hidden;transition: ease-out .35s;-moz-transition: ease-out .35s;-webkit-transition: ease-out .35s;}
+.mainnav li{float: left;padding: 5px;background: maroon;border-left: 1px dotted #fff;}
+.mainnav li:first-child{border: none;}
+.mainnav li a{ display: block;padding: 2px 20px;color: #fff;font-family: arial;}
+.mainnav li:hover{background: #fff;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
+.mainnav li:hover a{color: maroon;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
+/*First Level*/
+.subs {left: -45px;position: relative;top: 0px;width: 175px;border-left: none !important; border-bottom: 1px dotted #fff !important;}
+.subs:last-child{border: none !important;}
+.hassubs:hover .dropdown,.hassubs .hassubs:hover .dropdown{opacity: 1;visibility: visible; transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
+.mainnav li:hover ul a,.mainnav li:hover ul li ul li a{color: white;}
+.mainnav li ul li:hover,.mainnav li ul li ul li:hover{background: #fff;transition: ease-in-out .35s;-moz-transition: ease-in-out .35s;-webkit-transition: ease-in-out .35s;}
+.mainnav li ul li:hover a,.mainnav li ul li ul li:hover a{color: maroon;transition: ease-in-out .35s;-moz-transition: ease-in-out .35s;-webkit-transition: ease-in-out .35s;}
+/*Second Level*/
+.hassubs .hassubs .dropdown .subs{left: 25px;position: relative;width: 165px;top: 0px;}
+.hassubs .hassubs .dropdown{position: absolute;width: 150px;left: 120px;top: 0px;opacity: 0;visibility: hidden;transition: ease-out .35s;-moz-transition: ease-out .35s;-webkit-transition: ease-out .35s;}
 	
 	
 	
@@ -303,58 +284,58 @@ tr:nth-child(even) {
   <a href="https://rimedie.github.io/"><img class='displayed' style="float:left; border: 6px solid black; padding:10px; background:white; position:absolute; top:0px; right:0px; z-index: 4;" height="270" width="400" src="/images_gral/rimedie_logo_small.png" alt="LogoRIMEDIE" ></a> 
 	  <br><br>
    	  <div style="text-align:left;">
-	  <div class="dropdown">
-  <button class="dropbtn" style="border-radius: 0px"><a href="/" style="color:white;text-decoration: none;">Inicio</a></button>
-</div>
-	  <div class="dropdown">
-  <button class="dropbtn" style="border-radius: 0px"><a href="/about.html" style="color:white;text-decoration: none;">Acerca de nosotros</a></button>
-  <div class="dropdown-content" style="  width: 200px;">
-    <a href="/about_Filosifia.html">Misión y Visión</a>
-    <a href="/about_Objetivos.html">Objetivos Estratégicos</a>
-    <a href="/about.html">Fundación</a>
-    <a href="/about_Miembros.html">Equipo RIMEDIE</a>
-    <a href="/Directorio.html">Directorio</a>
-   </div>
-</div>
-   <div class="dropdown">
-  <button class="dropbtn" style="border-radius: 0px"><a href="" style="color:white;text-decoration: none;">Servicios</a></button>
-    <div class="dropdown-content" style="  width: 200px;">
-    <a href="" class="no-drop">Diagnóstico para Estudiantes</a>
-    <a href="" class="no-drop">Diagnóstico para Docentes</a>
-    <a href="" class="no-drop">Diagnóstico para Centros Escolares</a>
-    <a href="/PLANEA-ELSEN_2015/Resultados_Nacionales.html">Diagnósticos Nacionales y Estatales</a>
-    <a href="">Cursos y talleres</a>	        
-    <a href="" class="no-drop">Asesorías</a>
-   </div>
-</div>
-   <div class="dropdown">
-  <button class="dropbtn" style="border-radius: 0px"><a href="" style="color:white;text-decoration: none;">Proyectos y Publicaciones</a></button>
-  <div class="dropdown-content" style="  width: 200px;">
-    <a href="" class="no-drop">Análisis de Resultados de Diagnóstico</a>
-    <a href="" class="no-drop">Desarrollo de Instrumentos de Diagnóstico</a>
-    <a href="" class="no-drop">Desarrollo de Materiales Didácticos</a>
-    <a href="" class="no-drop">Desarrollo de Software Educativo</a>	  
-  </div>
-</div>
-	  <div class="dropdown">
-   <button class="dropbtn" style="border-radius: 0px"><a href="/eventos/" style="color:white;text-decoration: none;">Eventos</a></button>
-   <div class="dropdown-content" style="  width: 200px;">
-   <a href="/eventos/">Noticias</a>
-   <a href="" class="no-drop">Reuniones de trabajo</a>
-   <a href="" class="no-drop">Encuentros</a>
-   <a href="" class="no-drop">Seminarios / Foros / Conferencias</a>
-   </div>
-   </div>
-	  <div class="dropdown">
-   <button class="dropbtn" style="border-radius: 0px"><a href="" style="color:white;text-decoration: none;">Recursos Multimedia</a></button>
-   <div class="dropdown-content" style="  width: 190px;">
-   <a href="" class="no-drop">Galería</a>
-   <a href="" class="no-drop">Enlaces</a>
-   <a href="" class="no-drop">Boletín</a>
-   <a href="/videos.html">Videos</a>
-   </div>
-   </div>
-       </div>
+<div class="main">
+            <ul class="mainnav">
+		    <li><a href="/" style="color:white;text-decoration: none;">Inicio</a></button></li>
+  <li class="hassubs"><a href="/about.html" style="color:white;text-decoration: none;">Acerca de nosotros</a></button>
+  	  <ul class="dropdown">
+	  <li class="subs"><a href="/about_Filosifia.html">Misión y Visión</a></li>
+	  <li class="subs"><a href="/about_Objetivos.html">Objetivos Estratégicos</a></li>
+	  <li class="subs"><a href="/about.html">Fundación</a></li>
+	  <li class="subs"><a href="/about_Miembros.html">Equipo RIMEDIE</a></li>
+	  <li class="subs"><a href="/Directorio.html">Directorio</a></li>
+	  </ul>
+   </li>	
+   <li class="hassubs"><a href="" style="color:white;text-decoration: none;">Servicios</a></button>
+    	<ul class="dropdown">
+	<li class="subs"><a href="" class="no-drop">Diagnóstico para Estudiantes</a></li>
+	<li class="subs"><a href="" class="no-drop">Diagnóstico para Docentes</a></li>
+	<li class="subs"><a href="" class="no-drop">Diagnóstico para Centros Escolares</a></li>
+    	<li class="subs"><a href="/PLANEA-ELSEN_2015/Resultados_Nacionales.html">Diagnósticos Nacionales y Estatales</a></li>
+    		<li class="subs hassubs"><a href="">Cursos y talleres</a>	        
+			<ul class="dropdown">
+				<li class="subs"><a href="" class="no-drop">Asesorías</a></li>
+				<li class="subs"><a href="" class="no-drop">Asesorías</a></li>
+			</ul>
+		</li>
+	<li class="subs"><a href="" class="no-drop">Asesorías</a></li>
+	</ul>
+   </li>
+   <li class="hassubs"><a href="" style="color:white;text-decoration: none;">Proyectos y Publicaciones</a></button>
+  	<ul class="dropdown">
+	<li class="subs"><a href="" class="no-drop">Análisis de Resultados de Diagnóstico</a></li>
+	<li class="subs"><a href="" class="no-drop">Desarrollo de Instrumentos de Diagnóstico</a></li>
+	<li class="subs"><a href="" class="no-drop">Desarrollo de Materiales Didácticos</a></li>
+	<li class="subs"><a href="" class="no-drop">Desarrollo de Software Educativo</a></li>
+	</ul>
+   </li>
+   <li class="hassubs"><a href="/eventos/" style="color:white;text-decoration: none;">Eventos</a></button>
+   	<ul class="dropdown">
+	<li class="subs"><a href="/eventos/">Noticias</a></li>
+	<li class="subs"><a href="" class="no-drop">Reuniones de trabajo</a></li>
+	<li class="subs"><a href="" class="no-drop">Encuentros</a></li>
+	<li class="subs"><a href="" class="no-drop">Seminarios / Foros / Conferencias</a></li>
+	</ul>
+   </li>
+   <li class="hassubs"><a href="" style="color:white;text-decoration: none;">Recursos Multimedia</a></button>
+   	<ul class="dropdown">
+   	<li class="subs"><a href="" class="no-drop">Galería</a></li>
+	<li class="subs"><a href="" class="no-drop">Enlaces</a></li>
+	<li class="subs"><a href="" class="no-drop">Boletín</a></li>
+	<li class="subs"><a href="/videos.html">Videos</a></li>
+	</ul>
+   </li>
+</ul>
 	  <header>
 		  		
 
