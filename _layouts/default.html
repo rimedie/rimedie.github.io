@@ -147,10 +147,6 @@ ul {
 /*General Menu Styling*/
 .mainnav{
 	margin: 0 auto}
-li{
-	list-style: none;}
-li a{
-	text-decoration: none;}
 .dropdown{
 	position: absolute; 
 	width: 150px;
@@ -166,16 +162,16 @@ li a{
 	background: maroon;
 	border-left: 1px dotted #fff;}
 .mainnav li:first-child{border: none;}
-.mainnav li a{ display: block;padding: 2px 20px;color: #fff;font-family: arial;}
+.mainnav li a{ display: block;padding: 2px 20px;color: #fff;font-family: arial;text-decoration: none;}
 .mainnav li:hover{background: #fff;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
-.mainnav li:hover a{color: maroon;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
+.mainnav li:hover a{color: maroon;transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;text-decoration: none;}
 /*First Level*/
 .subs {left: -45px;position: relative;top: 0px;width: 175px;border-left: none !important; border-bottom: 1px dotted #fff !important;}
 .subs:last-child{border: none !important;}
 .hassubs:hover .dropdown,.hassubs .hassubs:hover .dropdown{opacity: 1;visibility: visible; transition: ease-in .35s;-moz-transition: ease-in .35s;-webkit-transition: ease-in .35s;}
-.mainnav li:hover ul a,.mainnav li:hover ul li ul li a{color: white;}
+.mainnav li:hover ul a,.mainnav li:hover ul li ul li a{color: white;text-decoration: none;}
 .mainnav li ul li:hover,.mainnav li ul li ul li:hover{background: #fff;transition: ease-in-out .35s;-moz-transition: ease-in-out .35s;-webkit-transition: ease-in-out .35s;}
-.mainnav li ul li:hover a,.mainnav li ul li ul li:hover a{color: maroon;transition: ease-in-out .35s;-moz-transition: ease-in-out .35s;-webkit-transition: ease-in-out .35s;}
+.mainnav li ul li:hover a,.mainnav li ul li ul li:hover a{color: maroon;transition: ease-in-out .35s;-moz-transition: ease-in-out .35s;-webkit-transition: ease-in-out .35s;text-decoration: none;}
 /*Second Level*/
 .hassubs .hassubs .dropdown .subs{left: 25px;position: relative;width: 165px;top: 0px;}
 .hassubs .hassubs .dropdown{position: absolute;width: 150px;left: 120px;top: 0px;opacity: 0;visibility: hidden;transition: ease-out .35s;-moz-transition: ease-out .35s;-webkit-transition: ease-out .35s;}
@@ -295,7 +291,7 @@ tr:nth-child(even) {
   </head>
   <body>
   <a href="https://rimedie.github.io/"><img class='displayed' style="float:left; border: 6px solid black; padding:10px; background:white; position:absolute; top:0px; right:0px; z-index: 4;" height="270" width="400" src="/images_gral/rimedie_logo_small.png" alt="LogoRIMEDIE" ></a> 
-	  <br><br>
+	  <br>
    	  <div style="text-align:left;">
   <ul class="mainnav">
   <li><a href="/" style="color:white;text-decoration: none;">Inicio</a></button></li>
