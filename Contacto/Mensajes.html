@@ -8,6 +8,48 @@ title: Contacta a la RIMEDIE
 
 <p>Llena el siguiente formato y un miembro de la RIMEDIE se pondrá en contacto contigo a la brevedad.</p>
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <title>FormSubmit Demo</title>
+        <style>
+            h1 {
+                text-align: center;
+                margin: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Contacta a la RIMEDIE</h1>
+            <form action="https://formsubmit.co/rvazquez@rimedie.org.mx" method="POST">
+		    <input type="hidden" name="_captcha" value="false">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Nombre completo..." required>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Dirección e-mail" required>
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Título o Asunto" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Contenido del mensaje..." class="form-control" name="message" rows="14" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Enviar mensaje</button>
+            </form>
+        </div>
+	    
 <article class="subarticle" style="background: #e0d6c5; width:60%; margin-left:0px;">
 <form action="https://formspree.io/rvazquez@rimedie.org.mx" method="POST" style="max-width: 27rem;">
 	<p style="margin-top:0px; margin-bottom:0px;">Nombre:</p>
@@ -28,3 +70,6 @@ title: Contacta a la RIMEDIE
 <br><br>
 <p>O si lo prefieres, puedes enviar un correo electrónico desde tu servidor de correo electrónico a la siguiente dirección: 
 <a href="mailto:contacto@rimedie.org.mx" target="_blank">contacto@rimedie.org.mx</a></p>
+	    
+	        </body>
+</html>
